@@ -14,12 +14,26 @@ for_window [class="^.*"] border pixel 1
 set $mod Mod4
 # set $mod Mod1
 
+
+
+#I use picom as a compositor
 exec --no-startup-id picom
-# kill any hanging polybar processes
+
+
+#kill any hanging polybar processes
 exec_always killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
+
+
+#I have a triple monitor setup. This script calls a xrandr command which organizes my monitors and
+#tells them what orientation and refresh rate to take.
 exec --no-startup-id ~/.screenlayout/normal_layout.sh
+
+
+
+#nitrogen loads my wallpaper.
+exec --no-startup-id nitrogen --restore
 
 bindsym Print exec maim "/home/$USER/Pictures/$(date).jpg"
 bindsym $mod+Print exec maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date).jpg"
