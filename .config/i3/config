@@ -28,7 +28,7 @@ exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
 #I have a triple monitor setup. This script calls a xrandr command which organizes my monitors and
 #tells them what orientation and refresh rate to take.
-exec --no-startup-id ~/.screenlayout/normal_layout.sh
+exec_always --no-startup-id ~/.screenlayout/normal_layout.sh
 
 
 
