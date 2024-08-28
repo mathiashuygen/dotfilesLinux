@@ -12,6 +12,6 @@ return {
 	config = function()
 		--keymap to show the files in a directory using neo-tree. 
 		vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left <CR>')
-		vim.keymap.set('n', '<C-l>', ':Neotree filesystem close <CR>')
+		vim.keymap.set('n', '<C-b>', ':Neotree filesystem close <CR>')
 	end
 }
