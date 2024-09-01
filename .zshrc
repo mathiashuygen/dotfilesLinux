@@ -1,4 +1,4 @@
-
+﻿
 
 neofetch
 
@@ -128,7 +128,13 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+export PATH="$SCALA_HOME/bin:$PATH"
+export SCALA_HOME="	/usr/local/share/scala"
 alias ls="eza --icons=always"
 eval "$(zoxide init zsh)"
 alias cd="z"
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
